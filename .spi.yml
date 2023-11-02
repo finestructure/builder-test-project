@@ -1,4 +1,4 @@
 version: 1
 builder:
   configs:
-    - documentation_targets: [builder-test-project]
+    - documentation_targets: [non-existing-target, builder-test-project]
