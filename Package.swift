@@ -1,6 +1,7 @@
 // swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
+import Foundation
 import PackageDescription
 
 let package = Package(
@@ -11,6 +12,7 @@ let package = Package(
             name: "builder-test-project",
             targets: ["builder-test-project"]),
     ],
+    dependencies: [],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
@@ -21,3 +23,7 @@ let package = Package(
             dependencies: ["builder-test-project"]),
     ]
 )
+
+if ProcessInfo.processInfo.environment["SPI_BUILDER"] == "1" {
+    package.dependencies.append(.package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"))
+}
