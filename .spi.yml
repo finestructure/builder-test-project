@@ -1,4 +1,4 @@
 version: 1
 builder:
   configs:
-    - documentation_targets: [builder-test-project]
+    - documentation_targets: [target-1, target-2]
