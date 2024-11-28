@@ -20,5 +20,5 @@ let package = Package(
             name: "builder-test-projectTests",
             dependencies: ["builder-test-project"]),
     ],
-    swiftLanguageVersions: [.version("6")]
+    swiftLanguageVersions: [.v5, .version("6")]
 )
