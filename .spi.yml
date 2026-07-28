@@ -3,3 +3,4 @@ builder:
   configs:
     - documentation_targets: [builder-test-project]
       platform: iOS
+      swift_version: 6.4
